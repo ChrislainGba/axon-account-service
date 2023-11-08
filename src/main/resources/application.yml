@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: account-service
+  jpa:
+    open-in-view: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://${PSQL_HOST:localhost}:${PSQL_PORT:5432}/DB_AXON_BANK
+    username: ${PSQL_USER:postgres}
+    password: ${PSQL_PWD:postgres}
+    driver-class-name: org.postgresql.Driver
+    
